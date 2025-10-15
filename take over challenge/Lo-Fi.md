@@ -16,5 +16,17 @@ Capture the flag
 
 I began by visiting the target website: http://machine_ip/
 After navigating through different pages, I noticed that the URL structure included a page parameter: http://machine_ip/?page=relax.php
+
 ![Page parameter](parametre_LFI.png)
+
+To automate the discovery of potential Local File Inclusion vulnerabilities, I used ffuf, with the ``LFI-Jhaddix.txt`` wordlist
+
+<pre>
+ffuf -w /usr/share/wordlists/SecLists/Fuzzing/LFI/LFI-Jhaddix.txt -u "http://machine_ip/?page=FUZZ" -fl 124
+</pre>
+
+![FFUF LFI Results](FFUF.png)
+
+
+
 
