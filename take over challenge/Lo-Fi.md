@@ -2,15 +2,15 @@
 
 ## Room Info
 
-Platform: TryHackMe
-Difficulty: Easy
-Category: Web Exploitation
-Focus: Local File Inclusion (LFI), Directory Traversal
+- Platform: TryHackMe
+- Difficulty: Easy
+- Category: Web Exploitation
+- Focus: Local File Inclusion (LFI), Directory Traversal
 
 ## Objectives
-Identify and exploit a Local File Inclusion vulnerability
-Access sensitive files using path traversal
-Capture the flag
+- Identify and exploit a Local File Inclusion vulnerability
+- Access sensitive files using path traversal
+- Capture the flag
 
 ## Exploitation
 
@@ -34,6 +34,14 @@ http://machine_ip/?page=../../../../etc/passwd
 
 ![LFI /etc/passwd result](Test.png)
 
+After confirming the LFI vulnerability, I attempted to access the final target file:
+<pre>
+http://machine_ip/?page=../../../../../flag.txt
+</pre>
+
+The server responded with the contents of flag.txt, revealing the flag
+
+![Flag found](flag.png)
 
 
 
