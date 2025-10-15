@@ -27,6 +27,16 @@ ffuf -w /usr/share/wordlists/SecLists/Fuzzing/LFI/LFI-Jhaddix.txt -u "http://mac
 
 ![FFUF LFI Results](FFUF.png)
 
+After identifying the page parameter as vulnerable to Local File Inclusion, I tested one of the fuzzed payloads:
+<pre>
+http://machine_ip/?page=../../../../etc/passwd
+</pre>
+
+![LFI /etc/passwd result](Test.png)
+
+
+
+
 
 
 
