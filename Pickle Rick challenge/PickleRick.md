@@ -28,7 +28,7 @@ I checked robots.txt for hidden paths and found what appears to be the password
 
 I then navigated to /login.php, entered the credentials, and successfully authenticated
 
-![Login Panel](signing.png)
+![Login Panel](signing-page.png)
 
 After logging in, I tested the command panel by running ``ls`` and it executed successfully, confirming Remote Command Execution (RCE)
 
